@@ -24,12 +24,13 @@ public class PFYS extends Application {
     @Override
     public void start(Stage primaryStage) {
         
-        Text t = new Text(10, 50, "test");
+        Text t = new Text(100, 50, "test");
         t.setFont(new Font(20));
         
         
         Button btn = new Button();
         btn.setText("Login");
+        btn.setPrefSize(200,50);
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @ Override
