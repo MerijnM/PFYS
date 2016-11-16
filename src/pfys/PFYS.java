@@ -5,13 +5,14 @@ package pfys;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.text.*;
 
@@ -20,30 +21,44 @@ import javafx.scene.text.*;
  * @author IS109-Groep 5 haloooooooooooooooo
  */
 public class PFYS extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
+
+        Text username = new Text();                 //text die gebruikersnaam print bij inlogscherm
+        username.setText("Username");
+        username.setFont(Font.font("Verdana", 20));
+        username.setFill(Color.BLACK);  
+        username.setTranslateY(-110);   
         
-        Text t = new Text(100, 50, "test");
-        t.setFont(new Font(20));
-        
-        
+        Text password = new Text();
+        password.setText("Password");
+        password.setFont(Font.font("Verdana", 20));
+        password.setFill(Color.BLACK);  
+        password.setTranslateY(-20);                                                           
+
         Button btn = new Button();
-        btn.setText("Login");
-        btn.setPrefSize(200,50);
+        btn.setText("Login");                                           //inlog button
+        btn.setPrefSize(200, 50);
+        btn.setTranslateY(90);
+
         btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @ Override
+
+            @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                
             }
         });
+
+        Pane root = new StackPane();
+        root.getChildren().add(btn);                        //toevoegen button
+        root.getChildren().add(username);                    //toevoegen username text
+        root.getChildren().add(password);                    //toevoegen password text
         
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        
         
         Scene scene = new Scene(root, 300, 250);
-        
+
         primaryStage.setTitle("Applicatie naam");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -55,5 +70,5 @@ public class PFYS extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }
