@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author merij
+ * @author IS109-Groep 5
  */
 public class PFYS extends Application {
     
