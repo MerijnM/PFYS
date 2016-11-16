@@ -12,6 +12,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -26,6 +28,7 @@ public class PFYS extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        
 
         Text username = new Text();                 //text die gebruikersnaam print bij inlogscherm
         username.setText("Username");
