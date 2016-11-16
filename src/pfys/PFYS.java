@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.scene.text.*;
 
 /**
  *
@@ -22,11 +23,16 @@ public class PFYS extends Application {
     
     @Override
     public void start(Stage primaryStage) {
+        
+        Text t = new Text(10, 50, "test");
+        t.setFont(new Font(20));
+        
+        
         Button btn = new Button();
-        btn.setText("Say 'Hello World'");
+        btn.setText("Login");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
-            @Override
+            @ Override
             public void handle(ActionEvent event) {
                 System.out.println("Hello World!");
             }
@@ -37,7 +43,7 @@ public class PFYS extends Application {
         
         Scene scene = new Scene(root, 300, 250);
         
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Applicatie naam");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
