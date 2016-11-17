@@ -22,7 +22,7 @@ import javafx.scene.text.*;
 
 /**
  *
- * @author IS109-Groep 5 haloooooooooooooooo. Hallo FUCK DITTTTTTTTTTT UNINSTALLEERR xAhmet
+ * @author IS109-Groep 5 
  */
 public class PFYS extends Application {
 
